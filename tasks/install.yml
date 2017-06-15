@@ -12,7 +12,7 @@
   async: 1
   poll: 0
   ignore_errors: true
-  when: '{{ret_disable_nouveau|changed}}'
+  when: ret_disable_nouveau | changed
 
 - name: Wait for server to come back
   become: no
@@ -23,7 +23,7 @@
     state: started
     delay: 30
     timeout: 300
-  when: '{{ret_disable_nouveau|changed}}'
+  when: ret_disable_nouveau | changed
 
 - name: Stop display manager
   service:

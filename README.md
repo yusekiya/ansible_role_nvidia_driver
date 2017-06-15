@@ -22,7 +22,7 @@ Role Variables
 Version of nvidia driver.
 
 ``` yaml
-nvidia_driver_version: 367
+nvidia_driver_version: 375
 ```
 
 Dependencies

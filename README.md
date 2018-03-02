@@ -1,13 +1,14 @@
 Ansible Role: nvidia driver
 =========
 
+**Notice: Not tested yet**
+
 Install nvidia driver on Ubuntu 16.04.
 This role performs the followig tasks if a nvidia driver of specified version has not been installed:
 
 - Copy config file to disable Nouveau
-- Disable display manager lightdm
+- Add apt repository
 - Install nvidia driver of specified version
-- Enable lightdm again
 
 All the tasks need root privilege.
 

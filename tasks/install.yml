@@ -25,6 +25,10 @@
     timeout: 300
   when: ret_disable_nouveau | changed
 
+- name: Add repository
+  apt_repository:
+    repo: 'ppa:graphics-drivers'
+
 - name: Install nvidia driver
   apt:
     name: 'nvidia-{{nvidia_driver_version}}'

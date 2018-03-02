@@ -25,18 +25,9 @@
     timeout: 300
   when: ret_disable_nouveau | changed
 
-- name: Stop display manager
-  service:
-    name: lightdm
-    state: stopped
-
 - name: Install nvidia driver
   apt:
     name: 'nvidia-{{nvidia_driver_version}}'
     state: present
     update_cache: yes
 
-- name: Start display manager
-  service:
-    name: lightdm
-    state: started
